@@ -1,10 +1,10 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import { mount } from 'enzyme';
 
 import LongTextField from 'uniforms-material/LongTextField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<LongTextField> - renders a TextField', () => {
   const element = <LongTextField name="x" />;

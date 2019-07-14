@@ -1,10 +1,10 @@
 import FormHelperText from '@material-ui/core/FormHelperText';
 import React from 'react';
-import { mount } from 'enzyme';
 
 import ErrorsField from 'uniforms-material/ErrorsField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 const error = {
   error: 'validation-error',

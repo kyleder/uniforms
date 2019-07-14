@@ -1,11 +1,11 @@
 import AlarmIcon from '@material-ui/icons/Alarm';
 import IconButton from '@material-ui/core/IconButton';
 import React from 'react';
-import { mount } from 'enzyme';
 
 import ListDelField from 'uniforms-material/ListDelField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 const parent = {
   maxCount: 3,

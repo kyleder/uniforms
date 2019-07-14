@@ -1,10 +1,10 @@
 import Button from 'antd/lib/button';
 import React from 'react';
-import { mount } from 'enzyme';
 
 import SubmitField from 'uniforms-antd/SubmitField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<SubmitField> - renders', () => {
   const element = <SubmitField />;

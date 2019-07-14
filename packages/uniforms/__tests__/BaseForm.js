@@ -1,7 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import BaseForm from 'uniforms/BaseForm';
+
+import mount from './_mount';
 
 jest.mock('meteor/aldeed:simple-schema');
 jest.mock('meteor/check');
@@ -39,7 +40,7 @@ describe('BaseForm', () => {
       <BaseForm error={error} model={model} schema={schema} />
     );
 
-    const context = wrapper.instance().getChildContext();
+    const context = wrapper.instance().getContext();
 
     it('exists', () => {
       expect(context).toHaveProperty('uniforms', expect.any(Object));
@@ -113,7 +114,7 @@ describe('BaseForm', () => {
     });
 
     it('have correct `state`', () => {
-      const context = wrapper.instance().getChildContext();
+      const context = wrapper.instance().getContext();
 
       expect(context.uniforms).toHaveProperty('state', expect.any(Object));
       expect(context.uniforms.state).toHaveProperty('label', false);
@@ -127,7 +128,7 @@ describe('BaseForm', () => {
 
       wrapper.setProps({ schema: schema2 });
 
-      const context = wrapper.instance().getChildContext();
+      const context = wrapper.instance().getContext();
 
       expect(context.uniforms).toHaveProperty('schema', schema2);
     });
@@ -144,16 +145,16 @@ describe('BaseForm', () => {
     );
 
     it('updates `changed` and `changedMap`', () => {
-      const context1 = wrapper.instance().getChildContext().uniforms.state;
+      const context1 = wrapper.instance().getContext().uniforms.state;
       expect(context1).toHaveProperty('changed', false);
       expect(context1).toHaveProperty('changedMap', {});
 
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('$', [1, 2]);
 
-      const context2 = wrapper.instance().getChildContext().uniforms.state;
+      const context2 = wrapper.instance().getContext().uniforms.state;
       expect(context2).toHaveProperty('changed', true);
       expect(context2).toHaveProperty('changedMap.$');
       expect(context2.changedMap.$).toBeTruthy();
@@ -165,7 +166,7 @@ describe('BaseForm', () => {
       wrapper.setProps({ autosave: true });
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
 
       expect(onSubmit).toHaveBeenCalledTimes(1);
@@ -175,15 +176,15 @@ describe('BaseForm', () => {
     it('autosaves are not delayed', () => {
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 2);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 3);
 
       expect(onSubmit).toHaveBeenCalledTimes(3);
@@ -194,15 +195,15 @@ describe('BaseForm', () => {
       wrapper.setProps({ autosaveDelay: 10 });
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 2);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 3);
 
       await new Promise(resolve => setTimeout(resolve, 25));
@@ -215,30 +216,30 @@ describe('BaseForm', () => {
       wrapper.setProps({ autosaveDelay: 10 });
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 2);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 3);
 
       await new Promise(resolve => setTimeout(resolve, 25));
 
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 2);
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 3);
 
       await new Promise(resolve => setTimeout(resolve, 25));
@@ -251,7 +252,7 @@ describe('BaseForm', () => {
       wrapper.setProps({ autosave: false });
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
 
       expect(onSubmit).not.toBeCalled();
@@ -260,7 +261,7 @@ describe('BaseForm', () => {
     it('calls `onChange` with correct name and value', () => {
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
 
       expect(onChange).toHaveBeenCalledTimes(1);
@@ -277,7 +278,7 @@ describe('BaseForm', () => {
       wrapper.setProps({ onChange: undefined });
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
 
       expect(onChange).not.toBeCalled();
@@ -349,19 +350,19 @@ describe('BaseForm', () => {
         onSubmit: () => new Promise(resolve => (resolveSubmit = resolve))
       });
 
-      const context1 = wrapper.instance().getChildContext().uniforms.state;
+      const context1 = wrapper.instance().getContext().uniforms.state;
       expect(context1).toHaveProperty('submitting', false);
 
       wrapper.find('form').simulate('submit');
       await new Promise(resolve => process.nextTick(resolve));
 
-      const context2 = wrapper.instance().getChildContext().uniforms.state;
+      const context2 = wrapper.instance().getContext().uniforms.state;
       expect(context2).toHaveProperty('submitting', true);
 
       resolveSubmit();
       await new Promise(resolve => process.nextTick(resolve));
 
-      const context3 = wrapper.instance().getChildContext().uniforms.state;
+      const context3 = wrapper.instance().getContext().uniforms.state;
       expect(context3).toHaveProperty('submitting', false);
     });
 

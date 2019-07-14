@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import AutoForm from 'uniforms-semantic/AutoForm';
 
 import createSchema from './_createSchema';
+import mount from './_mount';
 
 test('<AutoForm> - works', () => {
   const element = <AutoForm schema={createSchema()} />;

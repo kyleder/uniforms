@@ -1,12 +1,12 @@
 import React from 'react';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import { mount } from 'enzyme';
 
 import ListAddField from 'uniforms-material/ListAddField';
 import ListField from 'uniforms-material/ListField';
 import ListItemField from 'uniforms-material/ListItemField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<ListField> - works', () => {
   const element = <ListField name="x" />;

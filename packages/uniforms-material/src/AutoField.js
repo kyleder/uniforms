@@ -14,10 +14,6 @@ import TextField from './TextField';
 export default class AutoField extends BaseField {
   static displayName = 'AutoField';
 
-  getChildContextName() {
-    return this.context.uniforms.name;
-  }
-
   render() {
     const props = this.getFieldProps(undefined, { ensureValue: false });
 

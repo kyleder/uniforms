@@ -1,9 +1,10 @@
 import React from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import { mount } from 'enzyme';
 
 import wrapField from 'uniforms-material/wrapField';
+
+import mount from './_mount';
 
 test('<wrapField> - renders wrapper', () => {
   const element = wrapField({}, <div />);

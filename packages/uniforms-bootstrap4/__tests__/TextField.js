@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import TextField from 'uniforms-bootstrap4/TextField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<TextField> - renders an input', () => {
   const element = <TextField name="x" />;

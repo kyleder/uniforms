@@ -1,11 +1,11 @@
 import Radio from 'antd/lib/radio';
 import React from 'react';
 import Select from 'antd/lib/select';
-import { mount } from 'enzyme';
 
 import SelectField from 'uniforms-antd/SelectField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<SelectField> - renders a select', () => {
   const element = <SelectField name="x" />;

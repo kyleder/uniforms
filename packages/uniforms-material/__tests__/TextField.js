@@ -1,10 +1,10 @@
 import React from 'react';
 import TextFieldMaterial from '@material-ui/core/TextField';
-import { mount } from 'enzyme';
 
 import TextField from 'uniforms-material/TextField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<TextField> - renders an TextField', () => {
   const element = <TextField name="x" />;

@@ -1,9 +1,10 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import AutoForm from 'uniforms/AutoForm';
 import connectField from 'uniforms/connectField';
 import { SimpleSchemaBridge } from 'uniforms-bridge-simple-schema';
+
+import mount from './_mount';
 
 jest.mock('meteor/aldeed:simple-schema');
 jest.mock('meteor/check');
@@ -40,7 +41,7 @@ describe('AutoForm', () => {
     it('updates', () => {
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', '2');
 
       expect(onChange).toHaveBeenCalledTimes(1);
@@ -50,7 +51,7 @@ describe('AutoForm', () => {
     it('calls `onChangeModel`', () => {
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', '2');
 
       expect(onChangeModel).toHaveBeenCalledTimes(1);
@@ -85,7 +86,7 @@ describe('AutoForm', () => {
       expect(onSubmit).not.toBeCalled();
       wrapper
         .instance()
-        .getChildContext()
+        .getContext()
         .uniforms.onChange('a', 1);
 
       await new Promise(resolve => process.nextTick(resolve));
@@ -108,23 +109,23 @@ describe('AutoForm', () => {
 
     it('reset `model`', () => {
       wrapper.instance().reset();
-      expect(wrapper.instance().getChildContext().uniforms.model).toEqual(
+      expect(wrapper.instance().getContext().uniforms.model).toEqual(
         intialModel
       );
     });
 
     it('resets state `changedMap`', () => {
       wrapper.instance().reset();
-      expect(
-        wrapper.instance().getChildContext().uniforms.state.changedMap
-      ).toEqual({});
+      expect(wrapper.instance().getContext().uniforms.state.changedMap).toEqual(
+        {}
+      );
     });
 
     it('resets state `changed`', () => {
       wrapper.instance().reset();
-      expect(
-        wrapper.instance().getChildContext().uniforms.state.changed
-      ).toEqual(false);
+      expect(wrapper.instance().getContext().uniforms.state.changed).toEqual(
+        false
+      );
     });
   });
 
@@ -134,7 +135,7 @@ describe('AutoForm', () => {
     it('updates when changed', () => {
       wrapper.setProps({ model: {} });
 
-      expect(wrapper.instance().getChildContext().uniforms.model).toEqual({});
+      expect(wrapper.instance().getContext().uniforms.model).toEqual({});
     });
 
     it('validates', () => {

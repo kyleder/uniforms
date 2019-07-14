@@ -1,22 +1,11 @@
 import PropTypes from 'prop-types';
 import cloneDeep from 'lodash/cloneDeep';
 import isEqual from 'lodash/isEqual';
-import merge from 'lodash/merge';
 import noop from 'lodash/noop';
 import omit from 'lodash/omit';
 import set from 'lodash/set';
 
-import BaseForm, {
-  __childContextTypes,
-  __childContextTypesBuild
-} from './BaseForm';
-
-const childContextTypes = __childContextTypesBuild(
-  merge(
-    { state: { validating: PropTypes.bool.isRequired } },
-    __childContextTypes
-  )
-);
+import BaseForm from './BaseForm';
 
 const Validated = parent =>
   class extends parent {
@@ -44,11 +33,6 @@ const Validated = parent =>
         .isRequired
     };
 
-    static childContextTypes = {
-      ...(parent.childContextTypes || {}),
-      uniforms: childContextTypes
-    };
-
     constructor() {
       super(...arguments);
 
@@ -58,9 +42,7 @@ const Validated = parent =>
         error: null,
         validate: false,
         validating: false,
-        validator: this.getChildContextSchema().getValidator(
-          this.props.validator
-        )
+        validator: this.getContextSchema().getValidator(this.props.validator)
       };
 
       this.onValidate = this.validate = this.onValidate.bind(this);
@@ -69,13 +51,13 @@ const Validated = parent =>
       );
     }
 
-    getChildContextError() {
-      return super.getChildContextError() || this.state.error;
+    getContextError() {
+      return super.getContextError() || this.state.error;
     }
 
-    getChildContextState() {
+    getContextState() {
       return {
-        ...super.getChildContextState(),
+        ...super.getContextState(),
 
         validating: this.state.validating
       };
@@ -167,7 +149,7 @@ const Validated = parent =>
     }
 
     onValidate(key, value) {
-      let model = this.getChildContextModel();
+      let model = this.getContextModel();
       if (model && key) {
         model = set(cloneDeep(model), key, cloneDeep(value));
       }

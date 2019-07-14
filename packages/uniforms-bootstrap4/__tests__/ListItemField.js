@@ -1,11 +1,11 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import AutoField from 'uniforms-bootstrap4/AutoField';
 import ListDelField from 'uniforms-bootstrap4/ListDelField';
 import ListItemField from 'uniforms-bootstrap4/ListItemField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<ListItemField> - works', () => {
   const element = <ListItemField name="x.1" />;

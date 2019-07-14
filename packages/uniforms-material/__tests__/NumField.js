@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import TextField from '@material-ui/core/TextField';
-import { mount } from 'enzyme';
 
 import NumField from 'uniforms-material/NumField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 const expectedValueTransform =
   parseInt(React.version, 10) < 16
@@ -132,7 +132,7 @@ test('<NumField> - renders a TextField with correct value (model)', () => {
   ].forEach(({ decimal = true, value }) => {
     const valueInput = expectedValueTransform(value);
 
-    wrapper.setProps({ decimal });
+    wrapper.setProps({ children: cloneElement(element, { decimal }) });
 
     expect(
       wrapper.find('input').simulate('change', { target: { value: '' } })
@@ -144,8 +144,9 @@ test('<NumField> - renders a TextField with correct value (model)', () => {
     ).toBeTruthy();
     expect(onChange).toHaveBeenLastCalledWith('x', value);
 
-    wrapper.setProps({ value: undefined });
-    wrapper.setProps({ value });
+    wrapper.setProps({ children: cloneElement(element, { value: undefined }) });
+    wrapper.setProps({ children: cloneElement(element, { value }) });
+
     expect(wrapper.find('input').prop('value')).toBe(valueInput);
   });
 

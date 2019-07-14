@@ -1,7 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import FormGroup from 'uniforms-bootstrap3/FormGroup';
+
+import mount from './_mount';
 
 test('FormGroup should be deprecated', () => {
   console.error = jest.fn();

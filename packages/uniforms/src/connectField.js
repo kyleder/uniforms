@@ -1,11 +1,12 @@
-import { createElement } from 'react';
+import React from 'react';
 
 import BaseField from './BaseField';
+import context from './context';
 
 const identity = x => x;
 
 export default function connectField(
-  component,
+  Component,
   {
     baseField = BaseField,
     mapProps = identity,
@@ -17,8 +18,8 @@ export default function connectField(
   } = {}
 ) {
   return class extends baseField {
-    static displayName = `${component.displayName ||
-      component.name}${baseField.displayName || baseField.name}`;
+    static displayName = `${Component.displayName ||
+      Component.name}${baseField.displayName || baseField.name}`;
 
     constructor() {
       super(...arguments);
@@ -33,9 +34,9 @@ export default function connectField(
         this.options.includeParent = includeParent;
     }
 
-    getChildContextName() {
+    getContextName() {
       return this.options.includeInChain
-        ? super.getChildContextName()
+        ? super.getContextName()
         : this.context.uniforms.name;
     }
 
@@ -68,7 +69,11 @@ export default function connectField(
     }
 
     render() {
-      return createElement(component, mapProps(this.getFieldProps()));
+      return (
+        <context.Provider value={this.getContext()}>
+          <Component {...mapProps(this.getFieldProps())} />
+        </context.Provider>
+      );
     }
   };
 }

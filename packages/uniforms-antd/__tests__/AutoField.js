@@ -1,5 +1,4 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import AutoField from 'uniforms-antd/AutoField';
 import BoolField from 'uniforms-antd/BoolField';
@@ -12,6 +11,7 @@ import SelectField from 'uniforms-antd/SelectField';
 import TextField from 'uniforms-antd/TextField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<AutoField> - works', () => {
   const element = <AutoField name="x" />;

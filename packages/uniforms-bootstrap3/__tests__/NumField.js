@@ -1,9 +1,9 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React, { cloneElement } from 'react';
 
 import NumField from 'uniforms-bootstrap3/NumField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 const expectedValueTransform =
   parseInt(React.version, 10) < 16
@@ -131,7 +131,7 @@ test('<NumField> - renders an input with correct value (model)', () => {
   ].forEach(({ decimal = true, value }) => {
     const valueInput = expectedValueTransform(value);
 
-    wrapper.setProps({ decimal });
+    wrapper.setProps({ children: cloneElement(element, { decimal }) });
 
     expect(
       wrapper.find('input').simulate('change', { target: { value: '' } })
@@ -143,8 +143,9 @@ test('<NumField> - renders an input with correct value (model)', () => {
     ).toBeTruthy();
     expect(onChange).toHaveBeenLastCalledWith('x', value);
 
-    wrapper.setProps({ value: undefined });
-    wrapper.setProps({ value });
+    wrapper.setProps({ children: cloneElement(element, { value: undefined }) });
+    wrapper.setProps({ children: cloneElement(element, { value }) });
+
     expect(wrapper.find('input').prop('value')).toBe(valueInput);
   });
 

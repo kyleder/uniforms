@@ -4,11 +4,11 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormLabel from '@material-ui/core/FormLabel';
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
-import { mount } from 'enzyme';
 
 import BoolField from 'uniforms-material/BoolField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<BoolField> - renders an Checkbox', () => {
   const element = <BoolField name="x" />;

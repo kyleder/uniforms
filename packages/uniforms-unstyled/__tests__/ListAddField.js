@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import ListAddField from 'uniforms-unstyled/ListAddField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 const parent = {
   maxCount: 3,

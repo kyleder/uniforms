@@ -7,12 +7,13 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import React from 'react';
 import Select from '@material-ui/core/Select';
-import SelectField from 'uniforms-material/SelectField';
 import Switch from '@material-ui/core/Switch';
 import TextField from '@material-ui/core/TextField';
-import { mount } from 'enzyme';
+
+import SelectField from 'uniforms-material/SelectField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<SelectField> - renders a Select', () => {
   const element = <SelectField name="x" />;

@@ -1,10 +1,11 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import connectField from 'uniforms/connectField';
 import nothing from 'uniforms/nothing';
 import randomIds from 'uniforms/randomIds';
 import { SimpleSchemaBridge } from 'uniforms-bridge-simple-schema';
+
+import mount from './_mount';
 
 jest.mock('meteor/aldeed:simple-schema');
 jest.mock('meteor/check');
@@ -122,10 +123,12 @@ describe('connectField', () => {
 
       const wrapper = mount(<Field name="field.subfield" />, reactContext);
 
-      wrapper.setContext({
-        uniforms: {
-          ...reactContext.context.uniforms,
-          model: { field: { field: 1 } }
+      wrapper.setProps({
+        value: {
+          uniforms: {
+            ...reactContext.context.uniforms,
+            model: { field: { field: 1 } }
+          }
         }
       });
 

@@ -1,9 +1,10 @@
 import Form from 'antd/lib/form';
 import React from 'react';
 import Tooltip from 'antd/lib/tooltip';
-import { mount } from 'enzyme';
 
 import wrapField from 'uniforms-antd/wrapField';
+
+import mount from './_mount';
 
 test('<wrapField> - renders wrapper with label', () => {
   const element = wrapField({ label: 'Label' }, <div />);

@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import QuickForm from 'uniforms-bootstrap4/QuickForm';
 
 import createSchema from './_createSchema';
+import mount from './_mount';
 
 test('<QuickForm> - renders', () => {
   const element = <QuickForm schema={createSchema()} />;

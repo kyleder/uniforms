@@ -1,8 +1,8 @@
-import BaseField from 'uniforms/BaseField';
 import Frame, { FrameContextConsumer } from 'react-frame-component';
-import React, { Component } from 'react';
+import React, { Component, createContext, useContext } from 'react';
 import ValidatedForm from 'uniforms/ValidatedForm';
 import connectField from 'uniforms/connectField';
+import context from 'uniforms/context';
 import omit from 'lodash/omit';
 import classNames from 'classnames';
 
@@ -14,6 +14,8 @@ import playgroundStyles from './playground.module.css';
 import { parseQuery, updateQuery } from './utils';
 
 import ConfigProvider from 'antd/lib/config-provider';
+
+const themeContext = createContext();
 
 class Playground extends Component {
   constructor() {
@@ -69,32 +71,21 @@ class Playground extends Component {
           <PlaygroundPropsField name="props" spellCheck={false} />
         </section>
 
-        <PlaygroundPreviewField name="props" nameTheme="theme" />
+        <PlaygroundPreviewField name="props" />
       </PlaygroundForm>
     );
   }
 }
 
-class PlaygroundField extends BaseField {
-  shouldComponentUpdate(props, state, context) {
-    return (
-      this.context.uniforms.state.theme !== context.uniforms.state.theme ||
-      super.shouldComponentUpdate(props, state, context)
-    );
-  }
-}
-
 class PlaygroundForm extends ValidatedForm {
-  getChildContextState() {
-    return {
-      ...super.getChildContextState(),
-      theme: this.props.model.theme
-    };
-  }
-
   render() {
-    const props = omit(this.getNativeFormProps(), ['onSubmit']);
-    return <section {...props} />;
+    return (
+      <themeContext.Provider value={this.props.model.theme}>
+        <context.Provider value={this.getContext()}>
+          <section {...omit(this.getNativeFormProps(), ['onSubmit'])} />
+        </context.Provider>
+      </themeContext.Provider>
+    );
   }
 }
 
@@ -120,7 +111,7 @@ class PlaygroundPreview extends Component {
   }
 
   render() {
-    const Form = themes[this.props.theme || 'unstyled'].AutoForm;
+    const Form = themes[this.context].AutoForm;
     const {
       asyncOnSubmit,
       asyncOnValidate,
@@ -135,7 +126,7 @@ class PlaygroundPreview extends Component {
       props.onValidate = (model, error, next) => setTimeout(() => next(), 1000);
 
     return (
-      <PlaygroundWrap theme={this.props.theme}>
+      <PlaygroundWrap theme={this.context}>
         {this.props.errorMessage ? (
           <span children={this.props.errorMessage} />
         ) : (
@@ -149,127 +140,108 @@ class PlaygroundPreview extends Component {
   }
 }
 
-const PlaygroundPreviewField = connectField(PlaygroundPreview, {
-  baseField: PlaygroundField
-});
+PlaygroundPreview.contextType = themeContext;
 
-class PlaygroundProps extends Component {
-  render() {
-    const { onChange, schema, theme, value } = this.props;
+const PlaygroundPreviewField = connectField(PlaygroundPreview);
 
-    const isAntd = theme === 'antd';
-    const isBootstrap = theme === 'bootstrap3' || theme === 'bootstrap4';
-    const isMaterial = theme === 'material';
-    const isSemantic = theme === 'semantic';
+function PlaygroundProps({ onChange, schema, value }) {
+  const theme = useContext(themeContext);
 
-    // FIXME: theme is undefined during `docusaurus build`.
-    const {
-      AutoForm,
-      BoolField,
-      ErrorsField,
-      LongTextField,
-      NumField
-    } = themes[theme || 'unstyled'];
+  const isAntd = theme === 'antd';
+  const isBootstrap = theme === 'bootstrap3' || theme === 'bootstrap4';
+  const isMaterial = theme === 'material';
+  const isSemantic = theme === 'semantic';
 
-    return (
-      <PlaygroundWrap theme={theme}>
-        <AutoForm
-          autosave
-          autosaveDelay={100}
-          model={value}
-          onSubmit={onChange}
-          schema={schema}
-        >
-          <BoolField name="autosave" />
-          <NumField name="autosaveDelay" disabled={!value.autosave} />
-          <BoolField name="disabled" />
-          <BoolField name="label" />
-          <BoolField name="placeholder" />
-          <BoolField
-            name="showInlineError"
-            disabled={!(isAntd || isBootstrap || isMaterial || isSemantic)}
-          />
-          <BoolField name="asyncOnSubmit" />
-          <BoolField name="asyncOnValidate" />
-          <LongTextField
-            name="schema"
-            {...(isMaterial && { fullWidth: true, rowsMax: 20 })}
-          />
-          <ErrorsField />
-        </AutoForm>
-      </PlaygroundWrap>
-    );
-  }
+  const { AutoField, AutoForm, ErrorsField, LongTextField } = themes[theme];
+
+  return (
+    <PlaygroundWrap theme={theme}>
+      <AutoForm
+        autosave
+        autosaveDelay={100}
+        model={value}
+        onSubmit={onChange}
+        schema={schema}
+      >
+        <AutoField name="autosave" />
+        <AutoField name="autosaveDelay" disabled={!value.autosave} />
+        <AutoField name="disabled" />
+        <AutoField name="label" />
+        <AutoField name="placeholder" />
+        <AutoField
+          name="showInlineError"
+          disabled={!(isAntd || isBootstrap || isMaterial || isSemantic)}
+        />
+        <AutoField name="asyncOnSubmit" />
+        <AutoField name="asyncOnValidate" />
+        <LongTextField
+          name="schema"
+          {...(isMaterial && { fullWidth: true, rowsMax: 20 })}
+        />
+        <ErrorsField />
+      </AutoForm>
+    </PlaygroundWrap>
+  );
 }
 
-const PlaygroundPropsField = connectField(PlaygroundProps, {
-  baseField: PlaygroundField
-});
+const PlaygroundPropsField = connectField(PlaygroundProps);
 
-class PlaygroundSelect extends Component {
-  render() {
-    // FIXME: allowedValues is undefined during `docusaurus build`.
-    const { allowedValues = [], onChange, transform, value } = this.props;
-
-    return (
-      <select onChange={event => onChange(event.target.value)} value={value}>
-        {allowedValues.map(value => (
-          <option key={value} value={value}>
-            {transform ? transform(value) : value}
-          </option>
-        ))}
-      </select>
-    );
-  }
+function PlaygroundSelect({ allowedValues = [], onChange, transform, value }) {
+  return (
+    <select onChange={event => onChange(event.target.value)} value={value}>
+      {allowedValues.map(value => (
+        <option key={value} value={value}>
+          {transform ? transform(value) : value}
+        </option>
+      ))}
+    </select>
+  );
 }
 
 const PlaygroundSelectField = connectField(PlaygroundSelect);
 
-export class PlaygroundWrap extends Component {
-  render() {
-    const { children, frameProps, theme } = this.props;
-    const content = (
-      <React.Fragment>
-        {children}
-        {styles[theme]}
-      </React.Fragment>
-    );
+export function PlaygroundWrap({ children, frameProps, theme }) {
+  const content = (
+    <React.Fragment>
+      {children}
+      {styles[theme]}
+    </React.Fragment>
+  );
 
-    if (theme === 'material') {
-      // Material-UI injects scoped CSS classes into head.
-      return (
-        <section
-          children={content}
-          className={classNames(
-            'frame-root',
-            playgroundStyles['playground-wrap']
-          )}
-        />
-      );
-    }
-
-    let frameContent = content;
-    if (theme === 'antd') {
-      // Make AntD popups contained within the iframe.
-      frameContent = (
-        <FrameContextConsumer>
-          {context => (
-            <ConfigProvider getPopupContainer={() => context.document.body}>
-              {content}
-            </ConfigProvider>
-          )}
-        </FrameContextConsumer>
-      );
-    }
-
+  if (theme === 'material') {
+    // Material-UI injects scoped CSS classes into head.
     return (
-      <Frame
-        children={frameContent}
-        className={playgroundStyles['playground-wrap']}
-        {...frameProps}
+      <section
+        children={content}
+        className={classNames(
+          'frame-root',
+          playgroundStyles['playground-wrap']
+        )}
       />
     );
   }
+
+  let frameContent = content;
+  if (theme === 'antd') {
+    // Make AntD popups contained within the iframe.
+    frameContent = (
+      <FrameContextConsumer>
+        {context => (
+          <ConfigProvider getPopupContainer={() => context.document.body}>
+            {content}
+          </ConfigProvider>
+        )}
+      </FrameContextConsumer>
+    );
+  }
+
+  return (
+    <Frame
+      children={frameContent}
+      className={playgroundStyles['playground-wrap']}
+      {...frameProps}
+    />
+  );
 }
 
 export default Playground;

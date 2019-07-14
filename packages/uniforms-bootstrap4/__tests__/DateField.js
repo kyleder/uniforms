@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import DateField from 'uniforms-bootstrap4/DateField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<DateField> - renders an input', () => {
   const element = <DateField name="x" />;

@@ -1,24 +1,22 @@
-import BaseField from 'uniforms/BaseField';
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
+import context from 'uniforms/context';
 import filterDOMProps from 'uniforms/filterDOMProps';
 
 import gridClassName from './gridClassName';
 
-const SubmitField = (
-  {
-    className,
-    disabled,
-    inputClassName,
-    inputRef,
-    value,
-    wrapClassName,
-    ...props
-  },
-  { uniforms: { error, state } }
-) => {
-  const hasWrap = !!(state.grid || wrapClassName);
+function SubmitField({
+  className,
+  disabled,
+  inputClassName,
+  inputRef,
+  value,
+  wrapClassName,
+  ...props
+}) {
+  const { error, state } = useContext(context).uniforms;
 
+  const hasWrap = !!(state.grid || wrapClassName);
   const blockInput = (
     <input
       className={inputClassName}
@@ -47,7 +45,6 @@ const SubmitField = (
           &nbsp;
         </label>
       )}
-
       {hasWrap && (
         <div
           className={classnames(
@@ -58,13 +55,11 @@ const SubmitField = (
           {blockInput}
         </div>
       )}
-
       {!hasWrap && blockInput}
     </div>
   );
-};
+}
 
-SubmitField.contextTypes = BaseField.contextTypes;
 SubmitField.defaultProps = { inputClassName: 'btn btn-primary' };
 
 export default SubmitField;

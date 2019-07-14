@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import SelectField from 'uniforms-semantic/SelectField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<SelectField> - renders a select', () => {
   const element = <SelectField name="x" />;

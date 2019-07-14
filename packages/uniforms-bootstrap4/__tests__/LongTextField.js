@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import LongTextField from 'uniforms-bootstrap4/LongTextField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<LongTextField> - renders a textarea', () => {
   const element = <LongTextField name="x" />;

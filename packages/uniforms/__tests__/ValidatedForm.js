@@ -1,8 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import ValidatedForm from 'uniforms/ValidatedForm';
 import { SimpleSchemaBridge } from 'uniforms-bridge-simple-schema';
+
+import mount from './_mount';
 
 jest.mock('meteor/aldeed:simple-schema');
 jest.mock('meteor/check');
@@ -61,7 +62,7 @@ describe('ValidatedForm', () => {
       form.validate().catch(() => {});
       await new Promise(resolve => process.nextTick(resolve));
 
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.error',
         error
       );
@@ -99,7 +100,7 @@ describe('ValidatedForm', () => {
 
       form.validate().catch(() => {});
 
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.error',
         error
       );
@@ -116,14 +117,14 @@ describe('ValidatedForm', () => {
 
       expect(validator).toHaveBeenCalled();
       expect(onValidate).toHaveBeenCalled();
-      expect(wrapper.instance().getChildContext()).not.toHaveProperty(
+      expect(wrapper.instance().getContext()).not.toHaveProperty(
         'uniforms.error',
         error
       );
     });
 
     it('has `validating` context variable, default `false`', () => {
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.state.validating',
         false
       );
@@ -132,7 +133,7 @@ describe('ValidatedForm', () => {
     it('sets `validating` `true` while validating', async () => {
       onValidate.mockImplementationOnce(() => {});
       form.validate();
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.state.validating',
         true
       );
@@ -140,7 +141,7 @@ describe('ValidatedForm', () => {
       // Resolve the async validation by calling the third argument of the first call to onValidate.
       expect(onValidate).toHaveBeenCalledTimes(1);
       onValidate.mock.calls[0][2]();
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.state.validating',
         false
       );
@@ -197,7 +198,7 @@ describe('ValidatedForm', () => {
       await new Promise(resolve => process.nextTick(resolve));
 
       expect(onSubmit).toHaveBeenCalled();
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.error',
         error
       );
@@ -207,7 +208,7 @@ describe('ValidatedForm', () => {
       onValidate.mockImplementationOnce(() => {});
       wrapper.find('form').simulate('submit');
       await new Promise(resolve => process.nextTick(resolve));
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.state.submitting',
         true
       );
@@ -224,7 +225,7 @@ describe('ValidatedForm', () => {
       onValidate.mock.calls[0][2]();
 
       await new Promise(resolve => process.nextTick(resolve));
-      expect(wrapper.instance().getChildContext()).toHaveProperty(
+      expect(wrapper.instance().getContext()).toHaveProperty(
         'uniforms.state.submitting',
         false
       );
@@ -245,7 +246,7 @@ describe('ValidatedForm', () => {
         );
         wrapper
           .instance()
-          .getChildContext()
+          .getContext()
           .uniforms.onChange('key', 'value');
 
         expect(validator).toHaveBeenCalledTimes(1);
@@ -259,7 +260,7 @@ describe('ValidatedForm', () => {
         );
         wrapper
           .instance()
-          .getChildContext()
+          .getContext()
           .uniforms.onChange('key', 'value');
 
         expect(validator).not.toHaveBeenCalled();
@@ -281,7 +282,7 @@ describe('ValidatedForm', () => {
       it('does not validates before submit', () => {
         wrapper
           .instance()
-          .getChildContext()
+          .getContext()
           .uniforms.onChange('key', 'value');
         expect(validator).not.toHaveBeenCalled();
       });
@@ -293,7 +294,7 @@ describe('ValidatedForm', () => {
         validator.mockReset();
         wrapper
           .instance()
-          .getChildContext()
+          .getContext()
           .uniforms.onChange('key', 'value');
         expect(validator).toHaveBeenCalledTimes(1);
       });
@@ -309,10 +310,10 @@ describe('ValidatedForm', () => {
         throw new Error();
       });
       wrapper.find('form').simulate('submit');
-      expect(wrapper.instance().getChildContext().uniforms.error).toBeTruthy();
+      expect(wrapper.instance().getContext().uniforms.error).toBeTruthy();
 
       wrapper.instance().reset();
-      expect(wrapper.instance().getChildContext().uniforms.error).toBeNull();
+      expect(wrapper.instance().getContext().uniforms.error).toBeNull();
     });
   });
 
@@ -393,7 +394,7 @@ describe('ValidatedForm', () => {
         ['1', '2', '3'].forEach(value => {
           wrapper
             .instance()
-            .getChildContext()
+            .getContext()
             .uniforms.onChange('key', value);
           wrapper.find('form').simulate('submit');
         });

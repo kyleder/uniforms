@@ -1,10 +1,10 @@
 import InputNumber from 'antd/lib/input-number';
 import React from 'react';
-import { mount } from 'enzyme';
 
 import NumField from 'uniforms-antd/NumField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<NumField> - renders an InputNumber', () => {
   const element = <NumField name="x" />;

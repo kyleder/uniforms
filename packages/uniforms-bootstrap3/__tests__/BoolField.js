@@ -1,9 +1,9 @@
 import React from 'react';
-import { mount } from 'enzyme';
 
 import BoolField from 'uniforms-bootstrap3/BoolField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<BoolField> - renders an input', () => {
   const element = <BoolField name="x" />;

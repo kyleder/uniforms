@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { mount } from 'enzyme';
 
 import QuickForm from 'uniforms/QuickForm';
 import { SimpleSchemaBridge } from 'uniforms-bridge-simple-schema';
+
+import mount from './_mount';
 
 jest.mock('meteor/aldeed:simple-schema');
 jest.mock('meteor/check');

@@ -1,12 +1,12 @@
 import React from 'react';
 import Tooltip from 'antd/lib/tooltip';
-import { mount } from 'enzyme';
 
 import ListAddField from 'uniforms-antd/ListAddField';
 import ListField from 'uniforms-antd/ListField';
 import ListItemField from 'uniforms-antd/ListItemField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<ListField> - works', () => {
   const element = <ListField name="x" />;

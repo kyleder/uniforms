@@ -1,12 +1,12 @@
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormLabel from '@material-ui/core/FormLabel';
 import React from 'react';
-import { mount } from 'enzyme';
 
 import AutoField from 'uniforms-material/AutoField';
 import NestField from 'uniforms-material/NestField';
 
 import createContext from './_createContext';
+import mount from './_mount';
 
 test('<NestField> - renders an <AutoField> for each field', () => {
   const element = <NestField name="x" />;
