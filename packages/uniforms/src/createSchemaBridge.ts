@@ -1,20 +1,26 @@
 import invariant from 'invariant';
 
-import Bridge from './Bridge';
+import Bridge, { Schema } from './Bridge';
+
+interface BridgeConstructor {
+  new (schema: Schema): Bridge;
+}
 
 const registered: (typeof Bridge)[] = [];
 
-function create(schema: any): Bridge {
+function create(schema: Schema): Bridge {
   // There's no need for an extra wrapper.
   if (isBridge(schema)) {
     return schema;
   }
 
-  const Bridge: any = registered.find(bridge => bridge.check(schema));
+  const BridgeConstructor = (registered.find(bridge =>
+    bridge.check(schema)
+  ) as unknown) as BridgeConstructor;
 
   invariant(Bridge, 'Unrecognised schema: %s', schema);
 
-  return new Bridge(schema);
+  return new BridgeConstructor(schema);
 }
 
 function isBridge(schema: any): schema is Bridge {

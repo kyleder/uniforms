@@ -1,5 +1,7 @@
 import invariant from 'invariant';
 
+export type Schema = any;
+
 export default abstract class Bridge {
   constructor(...args: any[]) {
     invariant(
@@ -9,7 +11,7 @@ export default abstract class Bridge {
     );
   }
 
-  static check(schema: any) {
+  static check(schema: Schema) {
     invariant(
       false,
       '%s have not implemented `check` method (args=%o).',

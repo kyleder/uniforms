@@ -8,9 +8,80 @@ import mapValues from 'lodash/mapValues';
 import omit from 'lodash/omit';
 import set from 'lodash/set';
 
-import randomIds from './randomIds';
-import createSchemaBridge from './createSchemaBridge';
+import Bridge, { Schema } from './Bridge';
 import changedKeys from './changedKeys';
+import createSchemaBridge from './createSchemaBridge';
+import randomIds from './randomIds';
+
+export type Model = Record<string, any>;
+export type ModelTransformMode = 'form' | 'submit' | 'validate';
+export type Error = any;
+
+export interface FormSubmittable {
+  onSubmit: (model?: Model) => any;
+}
+
+export interface FormCallbackable {
+  onSubmitFailure: () => {};
+  onSubmitSuccess: () => {};
+}
+
+export interface FormChangeable {
+  onChange: (key: string, value: any) => void;
+}
+
+export interface BaseFormContext extends FormSubmittable, FormChangeable {
+  name: string[];
+
+  error: Error;
+  model: Model;
+
+  schema: Bridge;
+
+  state: {
+    changed: boolean;
+    changedMap: object;
+    submitting: boolean;
+
+    disabled: boolean;
+    label: boolean;
+    placeholder: boolean;
+    showInlineError: boolean;
+  };
+
+  randomId: () => {};
+}
+
+export interface BaseFormProps
+  extends FormSubmittable,
+    FormChangeable,
+    FormCallbackable {
+  id: string;
+
+  error: Error;
+  model?: Model;
+  schema: Schema;
+
+  modelTransform: <T>(mode: ModelTransformMode, model: T) => any;
+
+  label?: string | boolean;
+  disabled: boolean;
+  placeholder: string | boolean;
+  showInlineError: boolean;
+
+  autosave?: boolean;
+  autosaveDelay: number;
+
+  noValidate?: boolean;
+}
+
+export interface BaseFormState {
+  bridge: Bridge;
+  changed: boolean | null;
+  changedMap: object;
+  resetCount: number;
+  submitting: boolean;
+}
 
 export const __childContextTypes = {
   name: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -46,12 +117,16 @@ export const __childContextTypes = {
   randomId: PropTypes.func.isRequired
 };
 
-export const __childContextTypesBuild = (type: any): any =>
+export const __childContextTypesBuild = type =>
   isPlainObject(type)
     ? PropTypes.shape(mapValues(type, __childContextTypesBuild)).isRequired
     : type;
 
-export default class BaseForm extends Component<any, any> {
+export default class BaseForm extends Component<
+  BaseFormProps,
+  BaseFormState,
+  BaseFormContext
+> {
   static displayName = 'Form';
 
   static defaultProps = {
@@ -89,9 +164,8 @@ export default class BaseForm extends Component<any, any> {
     uniforms: __childContextTypesBuild(__childContextTypes)
   };
 
-  constructor() {
-    // @ts-ignore
-    super(...arguments);
+  constructor(props) {
+    super(props);
 
     this.state = {
       bridge: createSchemaBridge(this.props.schema),
@@ -139,7 +213,7 @@ export default class BaseForm extends Component<any, any> {
     );
   }
 
-  componentWillReceiveProps({ schema }: any) {
+  componentWillReceiveProps({ schema }: { schema: Schema }) {
     if (this.props.schema !== schema) {
       this.setState(() => ({ bridge: createSchemaBridge(schema) }));
     }
@@ -152,7 +226,7 @@ export default class BaseForm extends Component<any, any> {
   delayId?: any;
   mounted: boolean;
   reset: () => void;
-  change: (key: any, value: any) => void;
+  change: (key: string, value: any) => void;
   submit: (event: any) => void;
   randomId: any;
 
@@ -226,7 +300,7 @@ export default class BaseForm extends Component<any, any> {
     };
   }
 
-  onChange(key: any, value: any) {
+  onChange(key: string, value: any) {
     // Do not set `changed` before componentDidMount
     if (this.state.changed !== null) {
       // @ts-ignore
@@ -269,7 +343,7 @@ export default class BaseForm extends Component<any, any> {
     this.setState(this.__reset);
   }
 
-  onSubmit(event?: any) {
+  onSubmit(event?: any): Promise<any> {
     if (event) {
       event.preventDefault();
       event.stopPropagation();
