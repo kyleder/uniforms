@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[49],{126:function(o){o.exports=JSON.parse('{"id":"examples/CommonForms/SignUpSchema","title":"SignUpSchema","description":"```js","source":"/home/runner/work/uniforms/uniforms/docs/examples/CommonForms/SignUpSchema.md","permalink":"/docs/examples/CommonForms/SignUpSchema"}')}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[57],{133:function(e){e.exports=JSON.parse('{"id":"examples/CustomFields/SwapFieldSchema","title":"SwapFieldSchema","description":"```js","source":"/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/SwapFieldSchema.md","permalink":"/docs/examples/CustomFields/SwapFieldSchema"}')}}]);

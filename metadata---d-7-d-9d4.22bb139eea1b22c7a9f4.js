@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[40],{93:function(e){e.exports=JSON.parse('{"permalink":"/","source":"/home/runner/work/uniforms/uniforms/website/pages/index.js"}')}}]);

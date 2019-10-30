@@ -1,0 +1,1065 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "0": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      15,
+      18,
+      30,
+      31,
+      32,
+      33,
+      0
+    ],
+    "1": [
+      0,
+      2,
+      3,
+      4,
+      7,
+      15,
+      18,
+      28,
+      1
+    ],
+    "2": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      74,
+      2
+    ],
+    "3": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      7,
+      74,
+      3
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/compare-matrix-landing.md": [
+      13
+    ],
+    "/home/runner/work/uniforms/uniforms/website/pages/index.js": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "/home/runner/work/uniforms/uniforms/website/pages/playground.js": [
+      0,
+      2,
+      3,
+      5
+    ],
+    "@theme/DocLegacyItem": [
+      2,
+      6
+    ],
+    "@theme/DocLegacyPage": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/api-bridges.md": [
+      8
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/api-context-data.md": [
+      9
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/api-fields.md": [
+      10
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/api-forms.md": [
+      11
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/api-helpers.md": [
+      12
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/compare-matrix.md": [
+      14
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CommonForms/SignUpSchema.md": [
+      16
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples-common-forms.mdx": [
+      0,
+      1,
+      15
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples-custom-bridge.md": [
+      17
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/CompositeFieldSchema.md": [
+      19
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/CycleFieldSchema.md": [
+      20
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/DisplayIfFieldSchema.md": [
+      21
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/ImageFieldSchema.md": [
+      22
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/RangeFieldSchema.md": [
+      23
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/RatingFieldSchema.md": [
+      24
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/SwapFieldSchema.md": [
+      25
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples-custom-fields.mdx": [
+      0,
+      1,
+      18
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/examples-custom-form.md": [
+      26
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/faq.md": [
+      27
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/installation.mdx": [
+      1,
+      28
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/motivation.md": [
+      29
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/tutorials-basic-uniforms-usage.mdx": [
+      0,
+      30
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/tutorials-creating-custom-field.mdx": [
+      0,
+      31
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/tutorials-customizing-your-form-layout.mdx": [
+      0,
+      32
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/tutorials-using-predefined-fields.mdx": [
+      0,
+      33
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/uth-autofield-algorithm.md": [
+      34
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/uth-bridge-concept.md": [
+      35
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/what-are-uniforms.md": [
+      36
+    ],
+    "/home/runner/work/uniforms/uniforms/docs/why-are-uniforms.md": [
+      37
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-b5f.json": [
+      38
+    ],
+    "main": [
+      72,
+      39
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-pages/index.json": [
+      40
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-api-bridges-611.json": [
+      41
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-api-context-data-ddc.json": [
+      42
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-api-fields-4e8.json": [
+      43
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-api-forms-9a6.json": [
+      44
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-api-helpers-031.json": [
+      45
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-compare-matrix-029.json": [
+      46
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-compare-matrix-landing-dc0.json": [
+      47
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-common-forms-305.json": [
+      48
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-common-forms-sign-up-schema-4c3.json": [
+      49
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-bridge-ae6.json": [
+      50
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-composite-field-schema-63e.json": [
+      51
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-cycle-field-schema-191.json": [
+      52
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-display-if-field-schema-978.json": [
+      53
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-image-field-schema-09e.json": [
+      54
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-range-field-schema-33c.json": [
+      55
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-rating-field-schema-2db.json": [
+      56
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-swap-field-schema-2ac.json": [
+      57
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-fields-9c6.json": [
+      58
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-examples-custom-form-d41.json": [
+      59
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-faq-019.json": [
+      60
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-installation-422.json": [
+      61
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-motivation-9e8.json": [
+      62
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-tutorials-basic-uniforms-usage-1dc.json": [
+      63
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-tutorials-creating-custom-field-19a.json": [
+      64
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-tutorials-customizing-your-form-layout-bd9.json": [
+      65
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-tutorials-using-predefined-fields-456.json": [
+      66
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-uth-autofield-algorithm-c5f.json": [
+      67
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-uth-bridge-concept-25b.json": [
+      68
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-what-are-uniforms-35f.json": [
+      69
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-docs/docs-why-are-uniforms-546.json": [
+      70
+    ],
+    "/home/runner/work/uniforms/uniforms/website/.docusaurus/docusaurus-plugin-content-pages/playground-339.json": [
+      71
+    ],
+    "runtime~main": [
+      39,
+      72
+    ],
+    "docsearch.js": [
+      73
+    ],
+    "@theme/NotFound": [
+      2,
+      3,
+      74
+    ]
+  },
+  "assets": {
+    "0": {
+      "js": [
+        {
+          "file": "0.9e0f6bf03d4bf7e65acf.js",
+          "hash": "9e0f6bf03d4bf7e65acf",
+          "publicPath": "/0.9e0f6bf03d4bf7e65acf.js"
+        }
+      ]
+    },
+    "1": {
+      "css": [
+        {
+          "file": "1.613f731cff6c9f95b450.css",
+          "hash": "613f731cff6c9f95b450",
+          "publicPath": "/1.613f731cff6c9f95b450.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "1.613f731cff6c9f95b450.js",
+          "hash": "613f731cff6c9f95b450",
+          "publicPath": "/1.613f731cff6c9f95b450.js"
+        }
+      ]
+    },
+    "2": {
+      "js": [
+        {
+          "file": "2.699da0c1c4b8cfdcfb79.js",
+          "hash": "699da0c1c4b8cfdcfb79",
+          "publicPath": "/2.699da0c1c4b8cfdcfb79.js"
+        }
+      ]
+    },
+    "3": {
+      "css": [
+        {
+          "file": "3.4b68ff19930b8dd4230b.css",
+          "hash": "4b68ff19930b8dd4230b",
+          "publicPath": "/3.4b68ff19930b8dd4230b.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "3.4b68ff19930b8dd4230b.js",
+          "hash": "4b68ff19930b8dd4230b",
+          "publicPath": "/3.4b68ff19930b8dd4230b.js"
+        }
+      ]
+    },
+    "4": {
+      "css": [
+        {
+          "file": "component---home-runner-work-uniforms-uniforms-website-pages-index-js-413-2e8.5f596f2d106fddcfe95c.css",
+          "hash": "5f596f2d106fddcfe95c",
+          "publicPath": "/component---home-runner-work-uniforms-uniforms-website-pages-index-js-413-2e8.5f596f2d106fddcfe95c.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "component---home-runner-work-uniforms-uniforms-website-pages-index-js-413-2e8.5f596f2d106fddcfe95c.js",
+          "hash": "5f596f2d106fddcfe95c",
+          "publicPath": "/component---home-runner-work-uniforms-uniforms-website-pages-index-js-413-2e8.5f596f2d106fddcfe95c.js"
+        }
+      ]
+    },
+    "5": {
+      "css": [
+        {
+          "file": "component---home-runner-work-uniforms-uniforms-website-pages-playground-js-217-062.10af5978caf49cd4429b.css",
+          "hash": "10af5978caf49cd4429b",
+          "publicPath": "/component---home-runner-work-uniforms-uniforms-website-pages-playground-js-217-062.10af5978caf49cd4429b.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "component---home-runner-work-uniforms-uniforms-website-pages-playground-js-217-062.10af5978caf49cd4429b.js",
+          "hash": "10af5978caf49cd4429b",
+          "publicPath": "/component---home-runner-work-uniforms-uniforms-website-pages-playground-js-217-062.10af5978caf49cd4429b.js"
+        }
+      ]
+    },
+    "6": {
+      "css": [
+        {
+          "file": "component---theme-doc-legacy-item-031-769.0075fff800c7854c6875.css",
+          "hash": "0075fff800c7854c6875",
+          "publicPath": "/component---theme-doc-legacy-item-031-769.0075fff800c7854c6875.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "component---theme-doc-legacy-item-031-769.0075fff800c7854c6875.js",
+          "hash": "0075fff800c7854c6875",
+          "publicPath": "/component---theme-doc-legacy-item-031-769.0075fff800c7854c6875.js"
+        }
+      ]
+    },
+    "7": {
+      "css": [
+        {
+          "file": "component---theme-doc-legacy-page-9-e-7-ca5.c5fb534418f0cb63d678.css",
+          "hash": "c5fb534418f0cb63d678",
+          "publicPath": "/component---theme-doc-legacy-page-9-e-7-ca5.c5fb534418f0cb63d678.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "component---theme-doc-legacy-page-9-e-7-ca5.c5fb534418f0cb63d678.js",
+          "hash": "c5fb534418f0cb63d678",
+          "publicPath": "/component---theme-doc-legacy-page-9-e-7-ca5.c5fb534418f0cb63d678.js"
+        }
+      ]
+    },
+    "8": {
+      "js": [
+        {
+          "file": "content---docs-api-bridgesc-72-5bc.2bd81978d14de112a91b.js",
+          "hash": "2bd81978d14de112a91b",
+          "publicPath": "/content---docs-api-bridgesc-72-5bc.2bd81978d14de112a91b.js"
+        }
+      ]
+    },
+    "9": {
+      "js": [
+        {
+          "file": "content---docs-api-context-data-9-b-1-6dd.2739c2b2c1b00aadf974.js",
+          "hash": "2739c2b2c1b00aadf974",
+          "publicPath": "/content---docs-api-context-data-9-b-1-6dd.2739c2b2c1b00aadf974.js"
+        }
+      ]
+    },
+    "10": {
+      "js": [
+        {
+          "file": "content---docs-api-fields-5-f-7-9e3.158154d7697330e7328e.js",
+          "hash": "158154d7697330e7328e",
+          "publicPath": "/content---docs-api-fields-5-f-7-9e3.158154d7697330e7328e.js"
+        }
+      ]
+    },
+    "11": {
+      "js": [
+        {
+          "file": "content---docs-api-forms-1-f-3-cc0.f3d288b553a813f35bf7.js",
+          "hash": "f3d288b553a813f35bf7",
+          "publicPath": "/content---docs-api-forms-1-f-3-cc0.f3d288b553a813f35bf7.js"
+        }
+      ]
+    },
+    "12": {
+      "js": [
+        {
+          "file": "content---docs-api-helpers-225-17f.23e189ac6a787edfa2f5.js",
+          "hash": "23e189ac6a787edfa2f5",
+          "publicPath": "/content---docs-api-helpers-225-17f.23e189ac6a787edfa2f5.js"
+        }
+      ]
+    },
+    "13": {
+      "js": [
+        {
+          "file": "content---docs-compare-matrix-landingf-45-b6d.8c52aff3e291ddcf45f2.js",
+          "hash": "8c52aff3e291ddcf45f2",
+          "publicPath": "/content---docs-compare-matrix-landingf-45-b6d.8c52aff3e291ddcf45f2.js"
+        }
+      ]
+    },
+    "14": {
+      "js": [
+        {
+          "file": "content---docs-compare-matrixeac-494.e947ac5965579cb38105.js",
+          "hash": "e947ac5965579cb38105",
+          "publicPath": "/content---docs-compare-matrixeac-494.e947ac5965579cb38105.js"
+        }
+      ]
+    },
+    "15": {
+      "css": [
+        {
+          "file": "content---docs-examples-common-forms-986-e8a.06d09b1cbd6c38a4afd8.css",
+          "hash": "06d09b1cbd6c38a4afd8",
+          "publicPath": "/content---docs-examples-common-forms-986-e8a.06d09b1cbd6c38a4afd8.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "content---docs-examples-common-forms-986-e8a.06d09b1cbd6c38a4afd8.js",
+          "hash": "06d09b1cbd6c38a4afd8",
+          "publicPath": "/content---docs-examples-common-forms-986-e8a.06d09b1cbd6c38a4afd8.js"
+        }
+      ]
+    },
+    "16": {
+      "js": [
+        {
+          "file": "content---docs-examples-common-forms-sign-up-schemad-0-c-526.1eed6d7cb0f654646f6e.js",
+          "hash": "1eed6d7cb0f654646f6e",
+          "publicPath": "/content---docs-examples-common-forms-sign-up-schemad-0-c-526.1eed6d7cb0f654646f6e.js"
+        }
+      ]
+    },
+    "17": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-bridge-736-e55.23426598fe73132c152f.js",
+          "hash": "23426598fe73132c152f",
+          "publicPath": "/content---docs-examples-custom-bridge-736-e55.23426598fe73132c152f.js"
+        }
+      ]
+    },
+    "18": {
+      "css": [
+        {
+          "file": "content---docs-examples-custom-fields-5-e-7-655.6b4b56ee3fcbe6a10646.css",
+          "hash": "6b4b56ee3fcbe6a10646",
+          "publicPath": "/content---docs-examples-custom-fields-5-e-7-655.6b4b56ee3fcbe6a10646.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-5-e-7-655.6b4b56ee3fcbe6a10646.js",
+          "hash": "6b4b56ee3fcbe6a10646",
+          "publicPath": "/content---docs-examples-custom-fields-5-e-7-655.6b4b56ee3fcbe6a10646.js"
+        }
+      ]
+    },
+    "19": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-composite-field-schemad-1-d-aa7.4f443c4aefa656d9f5fc.js",
+          "hash": "4f443c4aefa656d9f5fc",
+          "publicPath": "/content---docs-examples-custom-fields-composite-field-schemad-1-d-aa7.4f443c4aefa656d9f5fc.js"
+        }
+      ]
+    },
+    "20": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-cycle-field-schema-4-d-7-8e9.66f9f6f8de31c50f0ba6.js",
+          "hash": "66f9f6f8de31c50f0ba6",
+          "publicPath": "/content---docs-examples-custom-fields-cycle-field-schema-4-d-7-8e9.66f9f6f8de31c50f0ba6.js"
+        }
+      ]
+    },
+    "21": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-display-if-field-schema-3-c-2-228.058f0185bae7ce06d3fa.js",
+          "hash": "058f0185bae7ce06d3fa",
+          "publicPath": "/content---docs-examples-custom-fields-display-if-field-schema-3-c-2-228.058f0185bae7ce06d3fa.js"
+        }
+      ]
+    },
+    "22": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-image-field-schema-079-307.aad46a0831e7139f694d.js",
+          "hash": "aad46a0831e7139f694d",
+          "publicPath": "/content---docs-examples-custom-fields-image-field-schema-079-307.aad46a0831e7139f694d.js"
+        }
+      ]
+    },
+    "23": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-range-field-schema-24-e-9ff.cc24baf7a5543722f0e3.js",
+          "hash": "cc24baf7a5543722f0e3",
+          "publicPath": "/content---docs-examples-custom-fields-range-field-schema-24-e-9ff.cc24baf7a5543722f0e3.js"
+        }
+      ]
+    },
+    "24": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-rating-field-schema-76-f-512.23518d2d46e7a291dbb8.js",
+          "hash": "23518d2d46e7a291dbb8",
+          "publicPath": "/content---docs-examples-custom-fields-rating-field-schema-76-f-512.23518d2d46e7a291dbb8.js"
+        }
+      ]
+    },
+    "25": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-fields-swap-field-schema-488-a9b.6589c7e3523923e031c0.js",
+          "hash": "6589c7e3523923e031c0",
+          "publicPath": "/content---docs-examples-custom-fields-swap-field-schema-488-a9b.6589c7e3523923e031c0.js"
+        }
+      ]
+    },
+    "26": {
+      "js": [
+        {
+          "file": "content---docs-examples-custom-form-42-d-0b1.1edfe32af03a7e05e386.js",
+          "hash": "1edfe32af03a7e05e386",
+          "publicPath": "/content---docs-examples-custom-form-42-d-0b1.1edfe32af03a7e05e386.js"
+        }
+      ]
+    },
+    "27": {
+      "js": [
+        {
+          "file": "content---docs-faq-101-4c2.3f49b9223062ebc895b9.js",
+          "hash": "3f49b9223062ebc895b9",
+          "publicPath": "/content---docs-faq-101-4c2.3f49b9223062ebc895b9.js"
+        }
+      ]
+    },
+    "28": {
+      "css": [
+        {
+          "file": "content---docs-installation-1-d-1-b06.38011875ce849e651442.css",
+          "hash": "38011875ce849e651442",
+          "publicPath": "/content---docs-installation-1-d-1-b06.38011875ce849e651442.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "content---docs-installation-1-d-1-b06.38011875ce849e651442.js",
+          "hash": "38011875ce849e651442",
+          "publicPath": "/content---docs-installation-1-d-1-b06.38011875ce849e651442.js"
+        }
+      ]
+    },
+    "29": {
+      "js": [
+        {
+          "file": "content---docs-motivationd-8-f-8ae.a65ed9b056718762223c.js",
+          "hash": "a65ed9b056718762223c",
+          "publicPath": "/content---docs-motivationd-8-f-8ae.a65ed9b056718762223c.js"
+        }
+      ]
+    },
+    "30": {
+      "css": [
+        {
+          "file": "content---docs-tutorials-basic-uniforms-usagec-8-c-dd4.6934b22fce45071e3be9.css",
+          "hash": "6934b22fce45071e3be9",
+          "publicPath": "/content---docs-tutorials-basic-uniforms-usagec-8-c-dd4.6934b22fce45071e3be9.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "content---docs-tutorials-basic-uniforms-usagec-8-c-dd4.6934b22fce45071e3be9.js",
+          "hash": "6934b22fce45071e3be9",
+          "publicPath": "/content---docs-tutorials-basic-uniforms-usagec-8-c-dd4.6934b22fce45071e3be9.js"
+        }
+      ]
+    },
+    "31": {
+      "css": [
+        {
+          "file": "content---docs-tutorials-creating-custom-field-0-f-9-c03.1bcdcc4ef7efbfccf468.css",
+          "hash": "1bcdcc4ef7efbfccf468",
+          "publicPath": "/content---docs-tutorials-creating-custom-field-0-f-9-c03.1bcdcc4ef7efbfccf468.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "content---docs-tutorials-creating-custom-field-0-f-9-c03.1bcdcc4ef7efbfccf468.js",
+          "hash": "1bcdcc4ef7efbfccf468",
+          "publicPath": "/content---docs-tutorials-creating-custom-field-0-f-9-c03.1bcdcc4ef7efbfccf468.js"
+        }
+      ]
+    },
+    "32": {
+      "css": [
+        {
+          "file": "content---docs-tutorials-customizing-your-form-layoutf-71-37c.241cf9f6bc513e32c2cc.css",
+          "hash": "241cf9f6bc513e32c2cc",
+          "publicPath": "/content---docs-tutorials-customizing-your-form-layoutf-71-37c.241cf9f6bc513e32c2cc.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "content---docs-tutorials-customizing-your-form-layoutf-71-37c.241cf9f6bc513e32c2cc.js",
+          "hash": "241cf9f6bc513e32c2cc",
+          "publicPath": "/content---docs-tutorials-customizing-your-form-layoutf-71-37c.241cf9f6bc513e32c2cc.js"
+        }
+      ]
+    },
+    "33": {
+      "css": [
+        {
+          "file": "content---docs-tutorials-using-predefined-fieldsfbe-07e.07bd5266768cbc93fa0c.css",
+          "hash": "07bd5266768cbc93fa0c",
+          "publicPath": "/content---docs-tutorials-using-predefined-fieldsfbe-07e.07bd5266768cbc93fa0c.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "content---docs-tutorials-using-predefined-fieldsfbe-07e.07bd5266768cbc93fa0c.js",
+          "hash": "07bd5266768cbc93fa0c",
+          "publicPath": "/content---docs-tutorials-using-predefined-fieldsfbe-07e.07bd5266768cbc93fa0c.js"
+        }
+      ]
+    },
+    "34": {
+      "js": [
+        {
+          "file": "content---docs-uth-autofield-algorithm-4-e-3-177.55f183fbc19812acc65f.js",
+          "hash": "55f183fbc19812acc65f",
+          "publicPath": "/content---docs-uth-autofield-algorithm-4-e-3-177.55f183fbc19812acc65f.js"
+        }
+      ]
+    },
+    "35": {
+      "js": [
+        {
+          "file": "content---docs-uth-bridge-concept-811-982.ff24a62b7b9a6d2243b7.js",
+          "hash": "ff24a62b7b9a6d2243b7",
+          "publicPath": "/content---docs-uth-bridge-concept-811-982.ff24a62b7b9a6d2243b7.js"
+        }
+      ]
+    },
+    "36": {
+      "js": [
+        {
+          "file": "content---docs-what-are-uniformse-76-2d1.9c9a0c99ab5208b2725a.js",
+          "hash": "9c9a0c99ab5208b2725a",
+          "publicPath": "/content---docs-what-are-uniformse-76-2d1.9c9a0c99ab5208b2725a.js"
+        }
+      ]
+    },
+    "37": {
+      "js": [
+        {
+          "file": "content---docs-why-are-uniforms-43-a-7c0.744dd35bdd5b8a463649.js",
+          "hash": "744dd35bdd5b8a463649",
+          "publicPath": "/content---docs-why-are-uniforms-43-a-7c0.744dd35bdd5b8a463649.js"
+        }
+      ]
+    },
+    "38": {
+      "js": [
+        {
+          "file": "docsMetadata---docsac-2-1a3.88c6d4237f7b4a0695ee.js",
+          "hash": "88c6d4237f7b4a0695ee",
+          "publicPath": "/docsMetadata---docsac-2-1a3.88c6d4237f7b4a0695ee.js"
+        }
+      ]
+    },
+    "39": {
+      "css": [
+        {
+          "file": "main.6441506b1a6628bd5389.css",
+          "hash": "6441506b1a6628bd5389",
+          "publicPath": "/main.6441506b1a6628bd5389.css"
+        }
+      ],
+      "js": [
+        {
+          "file": "main.6441506b1a6628bd5389.js",
+          "hash": "6441506b1a6628bd5389",
+          "publicPath": "/main.6441506b1a6628bd5389.js"
+        }
+      ]
+    },
+    "40": {
+      "js": [
+        {
+          "file": "metadata---d-7-d-9d4.22bb139eea1b22c7a9f4.js",
+          "hash": "22bb139eea1b22c7a9f4",
+          "publicPath": "/metadata---d-7-d-9d4.22bb139eea1b22c7a9f4.js"
+        }
+      ]
+    },
+    "41": {
+      "js": [
+        {
+          "file": "metadata---docs-api-bridgesbe-3-9fa.91f8ea2afb039e368bbb.js",
+          "hash": "91f8ea2afb039e368bbb",
+          "publicPath": "/metadata---docs-api-bridgesbe-3-9fa.91f8ea2afb039e368bbb.js"
+        }
+      ]
+    },
+    "42": {
+      "js": [
+        {
+          "file": "metadata---docs-api-context-datafc-7-b35.1c27b71d1c5650ed4b81.js",
+          "hash": "1c27b71d1c5650ed4b81",
+          "publicPath": "/metadata---docs-api-context-datafc-7-b35.1c27b71d1c5650ed4b81.js"
+        }
+      ]
+    },
+    "43": {
+      "js": [
+        {
+          "file": "metadata---docs-api-fieldsdc-9-f71.8017d2916d61fdcab33c.js",
+          "hash": "8017d2916d61fdcab33c",
+          "publicPath": "/metadata---docs-api-fieldsdc-9-f71.8017d2916d61fdcab33c.js"
+        }
+      ]
+    },
+    "44": {
+      "js": [
+        {
+          "file": "metadata---docs-api-formsdaa-e70.633984cf1921db0c072d.js",
+          "hash": "633984cf1921db0c072d",
+          "publicPath": "/metadata---docs-api-formsdaa-e70.633984cf1921db0c072d.js"
+        }
+      ]
+    },
+    "45": {
+      "js": [
+        {
+          "file": "metadata---docs-api-helpers-382-94f.55b8532325e4c41cb0f2.js",
+          "hash": "55b8532325e4c41cb0f2",
+          "publicPath": "/metadata---docs-api-helpers-382-94f.55b8532325e4c41cb0f2.js"
+        }
+      ]
+    },
+    "46": {
+      "js": [
+        {
+          "file": "metadata---docs-compare-matrix-9-d-4-7c1.f6d4eba0bd00bbb1f8a0.js",
+          "hash": "f6d4eba0bd00bbb1f8a0",
+          "publicPath": "/metadata---docs-compare-matrix-9-d-4-7c1.f6d4eba0bd00bbb1f8a0.js"
+        }
+      ]
+    },
+    "47": {
+      "js": [
+        {
+          "file": "metadata---docs-compare-matrix-landinge-53-be6.f02268addcc5f467359e.js",
+          "hash": "f02268addcc5f467359e",
+          "publicPath": "/metadata---docs-compare-matrix-landinge-53-be6.f02268addcc5f467359e.js"
+        }
+      ]
+    },
+    "48": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-common-forms-5-b-8-6d5.b54ed4829fbb0c538eb1.js",
+          "hash": "b54ed4829fbb0c538eb1",
+          "publicPath": "/metadata---docs-examples-common-forms-5-b-8-6d5.b54ed4829fbb0c538eb1.js"
+        }
+      ]
+    },
+    "49": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-common-forms-sign-up-schema-066-7a7.8743ab4f9ca1119244e4.js",
+          "hash": "8743ab4f9ca1119244e4",
+          "publicPath": "/metadata---docs-examples-common-forms-sign-up-schema-066-7a7.8743ab4f9ca1119244e4.js"
+        }
+      ]
+    },
+    "50": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-bridge-9-b-6-cfd.f868b89e21aaecbe1927.js",
+          "hash": "f868b89e21aaecbe1927",
+          "publicPath": "/metadata---docs-examples-custom-bridge-9-b-6-cfd.f868b89e21aaecbe1927.js"
+        }
+      ]
+    },
+    "51": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fields-composite-field-schemac-9-c-3e0.0da427a2117a056a9fdb.js",
+          "hash": "0da427a2117a056a9fdb",
+          "publicPath": "/metadata---docs-examples-custom-fields-composite-field-schemac-9-c-3e0.0da427a2117a056a9fdb.js"
+        }
+      ]
+    },
+    "52": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fields-cycle-field-schemad-4-d-c26.cb36a84bbcc0341e33cd.js",
+          "hash": "cb36a84bbcc0341e33cd",
+          "publicPath": "/metadata---docs-examples-custom-fields-cycle-field-schemad-4-d-c26.cb36a84bbcc0341e33cd.js"
+        }
+      ]
+    },
+    "53": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fields-display-if-field-schema-969-064.c39b73085c40fb54b2b8.js",
+          "hash": "c39b73085c40fb54b2b8",
+          "publicPath": "/metadata---docs-examples-custom-fields-display-if-field-schema-969-064.c39b73085c40fb54b2b8.js"
+        }
+      ]
+    },
+    "54": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fields-image-field-schemab-2-e-1d0.b2cf677bdbbfc6da7fef.js",
+          "hash": "b2cf677bdbbfc6da7fef",
+          "publicPath": "/metadata---docs-examples-custom-fields-image-field-schemab-2-e-1d0.b2cf677bdbbfc6da7fef.js"
+        }
+      ]
+    },
+    "55": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fields-range-field-schemaa-88-c61.ea5ae1422d1c85da709c.js",
+          "hash": "ea5ae1422d1c85da709c",
+          "publicPath": "/metadata---docs-examples-custom-fields-range-field-schemaa-88-c61.ea5ae1422d1c85da709c.js"
+        }
+      ]
+    },
+    "56": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fields-rating-field-schema-526-d07.85fed2e57e11f8b0c516.js",
+          "hash": "85fed2e57e11f8b0c516",
+          "publicPath": "/metadata---docs-examples-custom-fields-rating-field-schema-526-d07.85fed2e57e11f8b0c516.js"
+        }
+      ]
+    },
+    "57": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fields-swap-field-schema-570-8c5.79b595ff71a4ab7e8065.js",
+          "hash": "79b595ff71a4ab7e8065",
+          "publicPath": "/metadata---docs-examples-custom-fields-swap-field-schema-570-8c5.79b595ff71a4ab7e8065.js"
+        }
+      ]
+    },
+    "58": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-fieldsc-3-c-f4d.cce1465f33fb00c5128a.js",
+          "hash": "cce1465f33fb00c5128a",
+          "publicPath": "/metadata---docs-examples-custom-fieldsc-3-c-f4d.cce1465f33fb00c5128a.js"
+        }
+      ]
+    },
+    "59": {
+      "js": [
+        {
+          "file": "metadata---docs-examples-custom-form-665-3c3.8a191a7f4fa38815e47f.js",
+          "hash": "8a191a7f4fa38815e47f",
+          "publicPath": "/metadata---docs-examples-custom-form-665-3c3.8a191a7f4fa38815e47f.js"
+        }
+      ]
+    },
+    "60": {
+      "js": [
+        {
+          "file": "metadata---docs-faqaae-640.f0254d3d2f2430d22e3c.js",
+          "hash": "f0254d3d2f2430d22e3c",
+          "publicPath": "/metadata---docs-faqaae-640.f0254d3d2f2430d22e3c.js"
+        }
+      ]
+    },
+    "61": {
+      "js": [
+        {
+          "file": "metadata---docs-installation-91-f-48b.7a3b4321e073456a2bf3.js",
+          "hash": "7a3b4321e073456a2bf3",
+          "publicPath": "/metadata---docs-installation-91-f-48b.7a3b4321e073456a2bf3.js"
+        }
+      ]
+    },
+    "62": {
+      "js": [
+        {
+          "file": "metadata---docs-motivation-9-ad-986.25fe89773acbfa96d775.js",
+          "hash": "25fe89773acbfa96d775",
+          "publicPath": "/metadata---docs-motivation-9-ad-986.25fe89773acbfa96d775.js"
+        }
+      ]
+    },
+    "63": {
+      "js": [
+        {
+          "file": "metadata---docs-tutorials-basic-uniforms-usage-3-b-0-d2a.08710d76e1dd2fe47127.js",
+          "hash": "08710d76e1dd2fe47127",
+          "publicPath": "/metadata---docs-tutorials-basic-uniforms-usage-3-b-0-d2a.08710d76e1dd2fe47127.js"
+        }
+      ]
+    },
+    "64": {
+      "js": [
+        {
+          "file": "metadata---docs-tutorials-creating-custom-field-688-905.8f3dd85cea805268fa8c.js",
+          "hash": "8f3dd85cea805268fa8c",
+          "publicPath": "/metadata---docs-tutorials-creating-custom-field-688-905.8f3dd85cea805268fa8c.js"
+        }
+      ]
+    },
+    "65": {
+      "js": [
+        {
+          "file": "metadata---docs-tutorials-customizing-your-form-layout-826-31e.a5a19717d283adc7443a.js",
+          "hash": "a5a19717d283adc7443a",
+          "publicPath": "/metadata---docs-tutorials-customizing-your-form-layout-826-31e.a5a19717d283adc7443a.js"
+        }
+      ]
+    },
+    "66": {
+      "js": [
+        {
+          "file": "metadata---docs-tutorials-using-predefined-fieldsa-57-68c.8a888620ca0bc13c4fb3.js",
+          "hash": "8a888620ca0bc13c4fb3",
+          "publicPath": "/metadata---docs-tutorials-using-predefined-fieldsa-57-68c.8a888620ca0bc13c4fb3.js"
+        }
+      ]
+    },
+    "67": {
+      "js": [
+        {
+          "file": "metadata---docs-uth-autofield-algorithme-55-28f.56280066c1296c81ead8.js",
+          "hash": "56280066c1296c81ead8",
+          "publicPath": "/metadata---docs-uth-autofield-algorithme-55-28f.56280066c1296c81ead8.js"
+        }
+      ]
+    },
+    "68": {
+      "js": [
+        {
+          "file": "metadata---docs-uth-bridge-concept-4-fa-e43.831f437ecad52abf6241.js",
+          "hash": "831f437ecad52abf6241",
+          "publicPath": "/metadata---docs-uth-bridge-concept-4-fa-e43.831f437ecad52abf6241.js"
+        }
+      ]
+    },
+    "69": {
+      "js": [
+        {
+          "file": "metadata---docs-what-are-uniforms-93-c-213.2600fe0d7b8305b29855.js",
+          "hash": "2600fe0d7b8305b29855",
+          "publicPath": "/metadata---docs-what-are-uniforms-93-c-213.2600fe0d7b8305b29855.js"
+        }
+      ]
+    },
+    "70": {
+      "js": [
+        {
+          "file": "metadata---docs-why-are-uniforms-355-34b.c31c8e66d84c0bff8f88.js",
+          "hash": "c31c8e66d84c0bff8f88",
+          "publicPath": "/metadata---docs-why-are-uniforms-355-34b.c31c8e66d84c0bff8f88.js"
+        }
+      ]
+    },
+    "71": {
+      "js": [
+        {
+          "file": "metadata---playgrounddce-730.06f5def11b10a2a3c004.js",
+          "hash": "06f5def11b10a2a3c004",
+          "publicPath": "/metadata---playgrounddce-730.06f5def11b10a2a3c004.js"
+        }
+      ]
+    },
+    "72": {
+      "js": [
+        {
+          "file": "runtime~main.aa6d9df2f7c658c8ccf5.js",
+          "hash": "aa6d9df2f7c658c8ccf5",
+          "publicPath": "/runtime~main.aa6d9df2f7c658c8ccf5.js"
+        }
+      ]
+    },
+    "73": {
+      "js": [
+        {
+          "file": "73.7b3585a0d4576f398138.js",
+          "hash": "7b3585a0d4576f398138",
+          "publicPath": "/73.7b3585a0d4576f398138.js"
+        }
+      ]
+    },
+    "74": {
+      "js": [
+        {
+          "file": "74.aa18f08cb3e95153391f.js",
+          "hash": "aa18f08cb3e95153391f",
+          "publicPath": "/74.aa18f08cb3e95153391f.js"
+        }
+      ]
+    }
+  }
+}

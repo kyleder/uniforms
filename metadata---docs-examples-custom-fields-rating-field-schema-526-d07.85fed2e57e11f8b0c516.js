@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[56],{132:function(e){e.exports=JSON.parse('{"id":"examples/CustomFields/RatingFieldSchema","title":"RatingFieldSchema","description":"```js","source":"/home/runner/work/uniforms/uniforms/docs/examples/CustomFields/RatingFieldSchema.md","permalink":"/docs/examples/CustomFields/RatingFieldSchema"}')}}]);
